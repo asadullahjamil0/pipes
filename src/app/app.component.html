@@ -17,4 +17,13 @@ There are two types of forms in Angular
 2 - template - driven form 
  -->
 <!-- Data Flows from templates to class and then service(api) and lastly towards database -->
- 
+
+<!-- How to create basic form -->
+<h1>Basic Form</h1>
+<form #loginForm='ngForm' (ngSubmit)="userLogin(loginForm.control)">
+  <input type="text" name="name" placeholder="Enter User-Name" ngModel>
+  <br> <br>
+  <input type="text" name="password" placeholder="Enter Password" ngModel>
+  <br> <br>
+  <button>Form Submit</button>
+</form>

@@ -10,5 +10,8 @@ export class AppComponent {
   user = {
     name: "AsadUllah",
     age: 34
+  };
+  userLogin(item: any) {
+    console.log(item);
   }
 }
