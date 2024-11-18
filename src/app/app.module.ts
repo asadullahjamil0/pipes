@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { USDPKRPipe } from './pipes/usdpkr.pipe';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RedElDirective } from './red-el.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    USDPKRPipe
+    USDPKRPipe,
+    RedElDirective
   ],
   imports: [
     BrowserModule,
