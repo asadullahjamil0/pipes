@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControlName, FormControl } from '@angular/forms';
+import { FormGroup, Validators, FormControl } from '@angular/forms';
+import { validateHeaderName } from 'http';
 
 @Component({
   selector: 'app-root',
@@ -16,11 +17,17 @@ export class AppComponent {
     console.log(item);
   }
   formLogin = new FormGroup({
-    user: new FormControl(''),
-    password: new FormControl('')
+    user: new FormControl('', [Validators.required, Validators.email]),
+    password: new FormControl('', [Validators.required, Validators.minLength(5)])
   })
   fbLogin() {
     console.log(this.formLogin.value);
+  }
+  get user1() {
+    return this.formLogin.get('user');
+  }
+  get password() {
+    return this.formLogin.get('password');
   }
 
 }
