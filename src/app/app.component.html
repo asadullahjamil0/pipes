@@ -27,3 +27,15 @@ There are two types of forms in Angular
   <br> <br>
   <button>Form Submit</button>
 </form>
+
+
+<!-- reacive form -->
+<h2>Now Learning rective form</h2>
+<form [formGroup]="formLogin" (ngSubmit)="fbLogin()">
+  <input type="text" name="name" placeholder="Enter your name" formControlName="user">
+  <br> <br>
+  <input type="text" name="password" placeholder="Enter Password" formControlName="password">
+  <br> <br>
+  <button>Login</button>
+  <br> <br> <br> <br>
+</form>
